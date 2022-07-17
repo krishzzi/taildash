@@ -1,0 +1,716 @@
+
+<!doctype html>
+<html  class="h-full bg-gray-50"  lang="en" xmlns:livewire="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="csrf-token" content="YqTGcPbGVUE4FahAUjuIRKjeYZk5qtiIFjeUrPc7" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="keyword" content="" />
+    <meta name="description" content="" />
+    <title>TailDash</title>
+    <link rel="icon" type="image/png" href="http://localhost:8000/" />
+    <!-- App Style -->
+    <link href="./css/app.css" rel="stylesheet">
+</head>
+<body  class="h-full overflow-hidden" x-data="{ darkMode: false  }" >
+<div class="h-full bg-gray-50" x-bind:class="{'dark': darkMode }">
+    <div x-data="{ mobileMenu: false }" @keydown.window.escape="mobileMenu = false" class="h-full flex dark--gray">
+
+        <!-- Narrow sidebar -->
+        <div class="hidden w-24 border-r-2 border-gray-700 h-full  overflow-y-auto md:block dark--gray">
+            <div class="w-full py-6 flex flex-col items-center">
+                <div class="flex-shrink-0 flex items-center ">
+                    <img class="h-8 w-auto " src="https://tailwindui.com/img/logos/workflow-mark.svg?color=white" alt="Workflow">
+                </div>
+                <div class="flex-1 mt-6 w-full px-2 space-y-1 ">
+
+                    <a href="#" class=" group w-full p-3 rounded-md flex flex-col items-center text-xs font-medium dark--violetWhite-hover" x-state:on="Current" x-state:off="Default" x-state-description="Current: &quot;bg-indigo-800 text-white&quot;, Default: &quot;text-indigo-100 hover:bg-indigo-800 hover:text-white&quot;">
+                        <svg class="h-6 w-6" x-state:on="Current" x-state:off="Default" x-state-description="Current: &quot;text-white&quot;, Default: &quot;text-indigo-300 group-hover:text-white&quot;" x-description="Heroicon name: outline/home" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
+                        </svg>
+                        <span class="mt-2">Home</span>
+                    </a>
+
+                    <a href="#" class=" group w-full p-3 rounded-md flex flex-col items-center text-xs font-medium  dark--violetWhite-hover" x-state-description="undefined: &quot;bg-indigo-800 text-white&quot;, undefined: &quot;text-indigo-100 hover:bg-indigo-800 hover:text-white&quot;">
+                        <svg class=" h-6 w-6" x-state-description="undefined: &quot;text-white&quot;, undefined: &quot;text-indigo-300 group-hover:text-white&quot;" x-description="Heroicon name: outline/view-grid" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path>
+                        </svg>
+                        <span class="mt-2">All Files</span>
+                    </a>
+
+                    <a href="#" class=" group w-full p-3 rounded-md flex flex-col items-center text-xs font-medium  dark--violetWhite-hover" aria-current="page" x-state-description="undefined: &quot;bg-indigo-800 text-white&quot;, undefined: &quot;text-indigo-100 hover:bg-indigo-800 hover:text-white&quot;">
+                        <svg class=" h-6 w-6" x-state-description="undefined: &quot;text-white&quot;, undefined: &quot;text-indigo-300 group-hover:text-white&quot;" x-description="Heroicon name: outline/photograph" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                        </svg>
+                        <span class="mt-2">Photos</span>
+                    </a>
+
+                    <a href="#" class="group w-full p-3 rounded-md flex flex-col items-center text-xs font-medium dark--violetWhite-hover" x-state-description="undefined: &quot;bg-indigo-800 text-white&quot;, undefined: &quot;text-indigo-100 hover:bg-indigo-800 hover:text-white&quot;">
+                        <svg class=" h-6 w-6" x-state-description="undefined: &quot;text-white&quot;, undefined: &quot;text-indigo-300 group-hover:text-white&quot;" x-description="Heroicon name: outline/user-group" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                        </svg>
+                        <span class="mt-2">Shared</span>
+                    </a>
+
+                    <a href="#" class="group w-full p-3 rounded-md flex flex-col items-center text-xs font-medium dark--violetWhite-hover" x-state-description="undefined: &quot;bg-indigo-800 text-white&quot;, undefined: &quot;text-indigo-100 hover:bg-indigo-800 hover:text-white&quot;">
+                        <svg class=" h-6 w-6" x-state-description="undefined: &quot;text-white&quot;, undefined: &quot;text-indigo-300 group-hover:text-white&quot;" x-description="Heroicon name: outline/collection" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
+                        </svg>
+                        <span class="mt-2">Albums</span>
+                    </a>
+
+                    <a href="#" class="group w-full p-3 rounded-md flex flex-col items-center text-xs font-medium dark--violetWhite-hover" x-state-description="undefined: &quot;bg-indigo-800 text-white&quot;, undefined: &quot;text-indigo-100 hover:bg-indigo-800 hover:text-white&quot;">
+                        <svg class=" h-6 w-6" x-state-description="undefined: &quot;text-white&quot;, undefined: &quot;text-indigo-300 group-hover:text-white&quot;" x-description="Heroicon name: outline/cog" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                        </svg>
+                        <span class="mt-2">Settings</span>
+                    </a>
+
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div x-show="mobileMenu" class="md:hidden" x-description="Off-canvas menu for mobile, show/hide based on off-canvas menu state." x-ref="dialog" aria-modal="true">
+            <div class="fixed inset-0 z-40 flex">
+
+                <div x-show="mobileMenu" x-transition:enter="transition-opacity ease-linear duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="transition-opacity ease-linear duration-300" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" x-description="Off-canvas menu overlay, show/hide based on off-canvas menu state." class="fixed inset-0 bg-gray-600 bg-opacity-75" @click="open = false" aria-hidden="true">
+                </div>
+
+                <div x-show="mobileMenu" x-transition:enter="transition ease-in-out duration-300 transform" x-transition:enter-start="-translate-x-full" x-transition:enter-end="translate-x-0" x-transition:leave="transition ease-in-out duration-300 transform" x-transition:leave-start="translate-x-0" x-transition:leave-end="-translate-x-full" x-description="Off-canvas menu, show/hide based on off-canvas menu state." class="relative max-w-xs w-full  pt-5 pb-4 flex-1 flex flex-col dark--gray">
+
+                    <div x-show="mobileMenu" x-transition:enter="ease-in-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="ease-in-out duration-300" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" class="absolute top-1 right-0 -mr-14 p-1" x-description="Close button, show/hide based on off-canvas menu state.">
+                        <button type="button" class="h-12 w-12 rounded-full flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-white" @click="mobileMenu = false">
+                            <svg class="h-6 w-6 text-white" x-description="Heroicon name: outline/x" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                            </svg>
+                            <span class="sr-only">Close sidebar</span>
+                        </button>
+                    </div>
+
+                    <div class="flex-shrink-0 px-4 flex items-center">
+                        <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/workflow-mark.svg?color=white" alt="Workflow">
+                    </div>
+                    <div class="mt-5 flex-1 h-0 px-2 overflow-y-auto ">
+                        <nav class="h-full flex flex-col">
+                            <div class="space-y-1">
+
+                                <a href="#" class="py-2 px-3 rounded-md flex items-center text-sm font-medium dark--violetWhite-hover" x-state:on="Current" x-state:off="Default" x-state-description="Current: &quot;bg-indigo-800 text-white&quot;, Default: &quot;text-indigo-100 hover:bg-indigo-800 hover:text-white&quot;">
+                                    <svg class="mr-3 h-6 w-6" x-state:on="Current" x-state:off="Default" x-state-description="Current: &quot;text-white&quot;, Default: &quot;text-indigo-300 group-hover:text-white&quot;" x-description="Heroicon name: outline/home" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
+                                    </svg>
+                                    <span>Home</span>
+                                </a>
+
+                                <a href="#" class="py-2 px-3 rounded-md flex items-center text-sm font-medium dark--violetWhite-hover" x-state-description="undefined: &quot;bg-indigo-800 text-white&quot;, undefined: &quot;text-indigo-100 hover:bg-indigo-800 hover:text-white&quot;">
+                                    <svg class=" mr-3 h-6 w-6" x-state-description="undefined: &quot;text-white&quot;, undefined: &quot;text-indigo-300 group-hover:text-white&quot;" x-description="Heroicon name: outline/view-grid" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path>
+                                    </svg>
+                                    <span>All Files</span>
+                                </a>
+
+                                <a href="#" class="py-2 px-3 rounded-md flex items-center text-sm font-medium dark--violetWhite-hover" aria-current="page" x-state-description="undefined: &quot;bg-indigo-800 text-white&quot;, undefined: &quot;text-indigo-100 hover:bg-indigo-800 hover:text-white&quot;">
+                                    <svg class="mr-3 h-6 w-6" x-state-description="undefined: &quot;text-white&quot;, undefined: &quot;text-indigo-300 group-hover:text-white&quot;" x-description="Heroicon name: outline/photograph" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                                    </svg>
+                                    <span>Photos</span>
+                                </a>
+
+                                <a href="#" class="py-2 px-3 rounded-md flex items-center text-sm font-medium dark--violetWhite-hover" x-state-description="undefined: &quot;bg-indigo-800 text-white&quot;, undefined: &quot;text-indigo-100 hover:bg-indigo-800 hover:text-white&quot;">
+                                    <svg class="mr-3 h-6 w-6" x-state-description="undefined: &quot;text-white&quot;, undefined: &quot;text-indigo-300 group-hover:text-white&quot;" x-description="Heroicon name: outline/user-group" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                                    </svg>
+                                    <span>Shared</span>
+                                </a>
+
+                                <a href="#" class="py-2 px-3 rounded-md flex items-center text-sm font-medium dark--violetWhite-hover" x-state-description="undefined: &quot;bg-indigo-800 text-white&quot;, undefined: &quot;text-indigo-100 hover:bg-indigo-800 hover:text-white&quot;">
+                                    <svg class="mr-3 h-6 w-6" x-state-description="undefined: &quot;text-white&quot;, undefined: &quot;text-indigo-300 group-hover:text-white&quot;" x-description="Heroicon name: outline/collection" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
+                                    </svg>
+                                    <span>Albums</span>
+                                </a>
+
+                                <a href="#" class="py-2 px-3 rounded-md flex items-center text-sm font-medium dark--violetWhite-hover" x-state-description="undefined: &quot;bg-indigo-800 text-white&quot;, undefined: &quot;text-indigo-100 hover:bg-indigo-800 hover:text-white&quot;">
+                                    <svg class="mr-3 h-6 w-6" x-state-description="undefined: &quot;text-white&quot;, undefined: &quot;text-indigo-300 group-hover:text-white&quot;" x-description="Heroicon name: outline/cog" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path>
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                    </svg>
+                                    <span>Settings</span>
+                                </a>
+
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+
+                <div class="flex-shrink-0 w-14" aria-hidden="true">
+                    <!-- Dummy element to force sidebar to shrink to fit close icon -->
+                </div>
+            </div>
+        </div>
+
+
+        <div x-data="{ rightBar: false }"  class="flex-1 flex flex-col overflow-hidden" >
+            <div x-data="{ l_navBar:false }">
+                <header class="w-full m-1 dark--gray ">
+                    <div class="relative z-10 flex-shrink-0 h-16 border-b border-gray-200 dark:border-b-gray-700 shadow-sm flex ">
+                        <button type="button" class="order-first border-r border-gray-200 dark:border-gray-800 px-4 text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500 md:hidden" @click="mobileMenu = true">
+                            <span class="sr-only">Open sidebar</span>
+                            <svg class="h-6 w-6" x-description="Heroicon name: outline/menu-alt-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7"></path>
+                            </svg>
+                        </button>
+                        <div class="w-full m-2 flex-1 flex ">
+                            <div class="hidden md:block md:w-56 sm:w-0  md:place-self-center md:mr-10">
+                                <h1 class="font-extrabold text-2xl"> TailDash</h1>
+                            </div>
+                            <div class="hidden lg:block lg:w-4/12 sm:w-0  md:place-self-center lg:mr-10">
+                                <span class="sr-only"> Dropdowns Menu</span>
+                            </div>
+
+                            <div class="flex-1 flex  m-1 ">
+                                <form class="w-full flex md:ml-0 rounded-full " action="#" method="GET">
+                                    <label for="search-field" class="sr-only">Search all files</label>
+                                    <div class="relative w-full text-gray-400 focus-within:text-gray-600 ">
+                                        <div class="pointer-events-none absolute inset-y-0 left-0 flex items-center ml-2">
+                                            <i class="fa-solid fa-search flex-shrink-0 mt-1 h-6 w-6 "></i>
+                                        </div>
+                                        <input name="search-field" id="search-field" class="h-full w-full  rounded-full py-2 pl-8 pr-3 text-base text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-0 focus:border-transparent focus:placeholder-gray-400" placeholder="Search" type="search">
+                                        <button type="button" class="flex absolute inset-y-0 right-0 items-center pr-3">
+                                            <svg aria-hidden="true" class="w-4 h-4 text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7 4a3 3 0 016 0v4a3 3 0 11-6 0V4zm4 10.93A7.001 7.001 0 0017 8a1 1 0 10-2 0A5 5 0 015 8a1 1 0 00-2 0 7.001 7.001 0 006 6.93V17H6a1 1 0 100 2h8a1 1 0 100-2h-3v-2.07z" clip-rule="evenodd"></path></svg>
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+
+                            <!-- Toggle switch begins -->
+                            <div class="flex justify-end items-center space-x-2 m-1">
+                                <label for="toggle" class="w-9 h-5 flex items-center  rounded-full p-1 cursor-pointer duration-300 ease-in-out dark:bg-gray-600 bg-gray-300">
+                                    <div class="toggle-dot bg-white w-4 h-4 rounded-full shadow-md transform duration-300 ease-in-out dark:translate-x-3"></div>
+                                </label>
+                                <input id="toggle" type="checkbox" class="hidden sr-only" :value="darkMode" @change="darkMode = !darkMode" />
+                            </div>
+                            <!-- Toggle switch ends -->
+
+                            <!-- Toggle Profile begins -->
+                            <div class="ml-2 flex items-center space-x-4 sm:ml-6 sm:space-x-6">
+                                <div x-data="{ u_profile: false }"  class="relative flex-shrink-0"  @click.away="u_profile = false">
+                                    <div>
+                                        <button type="button" class="bg-white rounded-full flex text-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" id="user-menu-button" x-ref="button" x-on:click="u_profile = ! u_profile" @keyup.space.prevent="onButtonEnter()" @keydown.enter.prevent="onButtonEnter()" aria-expanded="false" aria-haspopup="true" x-bind:aria-expanded="open.toString()" @keydown.arrow-up.prevent="onArrowUp()" @keydown.arrow-down.prevent="onArrowDown()">
+                                            <span class="sr-only">Open user menu</span>
+                                            <img class="h-8 w-8 rounded-full" src="https://images.unsplash.com/photo-1517365830460-955ce3ccd263?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=8&amp;w=256&amp;h=256&amp;q=80" alt="">
+                                        </button>
+                                    </div>
+                                    <template x-if="u_profile">
+                                        <div x-show="u_profile" x-transition:enter="transition ease-out duration-100" x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-75" x-transition:leave-start="transform opacity-100 scale-100" x-transition:leave-end="transform opacity-0 scale-95" class="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none dark--gray" x-ref="menu-items" x-description="Dropdown menu, show/hide based on menu state." role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1" @keydown.arrow-up.prevent="onArrowUp()" @keydown.arrow-down.prevent="onArrowDown()" @keydown.tab="open = false" @keydown.enter.prevent="open = false; focusButton()" @keyup.space.prevent="open = false; focusButton()">
+                                            <a href="#" class="block px-4 py-2 text-sm  dark--violetWhite-hover" x-state:on="Active" x-state:off="Not Active"  role="menuitem" tabindex="-1" id="user-menu-item-0" @mouseenter="activeIndex = 0" @mouseleave="activeIndex = -1" @click="open = false; focusButton()">Your Profile</a>
+                                            <a href="#" class="block px-4 py-2 text-sm  dark--violetWhite-hover"  role="menuitem" tabindex="-1" id="user-menu-item-1" @mouseenter="activeIndex = 1" @mouseleave="activeIndex = -1" @click="open = false; focusButton()">Sign out</a>
+                                        </div>
+                                    </template>
+                                </div>
+                            </div>
+                            <!-- Toggle Profile ends -->
+
+                            <!-- Call Button begins -->
+                            <div class="m-2 flex items-center space-x-4 sm:ml-6 sm:space-x-6 hidden md:block">
+                                <button  type="button" class="flex bg-indigo-600 p-1 rounded-full items-center justify-center text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                                    <svg class="h-6 w-6" x-description="Heroicon name: outline/plus-sm" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
+                                    </svg>
+                                    <span class="sr-only">Add file</span>
+                                </button>
+                            </div>
+                            <!-- Call Button ends -->
+                        </div>
+                    </div>
+                </header>
+
+
+                <div class=" dark--gray w-full">
+                    <nav class="w-full  border-b border-gray-300 flex dark:bg-gray-800 dark:border-b-gray-700" aria-label="Breadcrumb">
+                        <div class="flex w-8   items-center place-content-start hidden md:block float-left">
+                            <button   type="button" class="items-center flex  p-2 mt-1" @click="l_navBar = !l_navBar">
+                                <i class="fa-solid fa-bars"></i>
+                            </button>
+                        </div>
+                        <ol role="list" class="w-full flex    px-4 flex space-x-4 sm:px-6 lg:px-8">
+                            <li class="flex">
+                                <div class="flex items-center">
+                                    <a href="#" class="text-gray-500 hover:text-gray-700">
+                                        <svg class="flex-shrink-0 h-5 w-5" x-description="Heroicon name: solid/home" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                            <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"></path>
+                                        </svg>
+                                        <span class="sr-only">Home</span>
+                                    </a>
+                                </div>
+                            </li>
+
+                            <li class="flex ">
+                                <div class="flex items-center ">
+                                    <svg class="flex-shrink-0 w-6 h-full  text-gray-400 " viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z"></path>
+                                    </svg>
+                                    <a href="#" class="ml-4 text-sm font-medium text-gray-500 hover:text-gray-700 dark:text-gray-500">Projects</a>
+                                </div>
+                            </li>
+
+                            <li class="flex">
+                                <div class="flex items-center">
+                                    <svg class="flex-shrink-0 w-6 h-full text-gray-400" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z"></path>
+                                    </svg>
+                                    <a href="#" class="ml-4 text-sm font-medium text-gray-500 hover:text-gray-700 dark:text-white" aria-current="page">Project Nero</a>
+                                </div>
+                            </li>
+                        </ol>
+                        <div class="flex  justify-end items-center space-x-2 mr-2 h-full hidden md:block float-right">
+                            <button   type="button" class="items-center p-2 mt-1 flex" @click="rightBar = !rightBar">
+                                <i class="fa-solid fa-arrow-up-right-from-square "></i>
+                            </button>
+                        </div>
+                    </nav>
+                </div>
+
+
+                <!-- Main content -->
+                <div class="flex-1 flex items-stretch overflow-hidden w-full ">
+
+                    <!-- Secondary column (hidden on smaller screens) -->
+                    <template x-if="l_navBar">
+                        <aside class="hidden w-72   overflow-y-auto lg:block p-1 dark--gray no-scrollbar shadow-lg">
+                            <div class=" h-full ">
+                                <div class="flex-1 min-h-0 overflow-y-auto overflow-hidden  ">
+                                    <a href="#" class="flex p-2 border-b border-blue-gray-200  dark--violetWhite-hover" x-state-description="undefined: &quot;bg-blue-50 bg-opacity-50&quot;, undefined: &quot;hover:bg-blue-50 hover:bg-opacity-50&quot;">
+                                        <i class="fa-solid fa-gear flex-shrink-0 mt-1 h-6 w-6 "></i>
+                                        <div class="ml-3 text-sm">
+                                            <p class="font-medium text-blue-gray-900">Account</p>
+                                            <p class="mt-1 text-blue-gray-500 text-xs text-justify truncate overflow-clip ">Ullamcorper id at suspendisse nec id volutpat vestibulum enim. Interdum blandit.</p>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="flex p-2 border-b border-blue-gray-200  dark--violetWhite-hover" x-state-description="undefined: &quot;bg-blue-50 bg-opacity-50&quot;, undefined: &quot;hover:bg-blue-50 hover:bg-opacity-50&quot;">
+                                        <svg class="flex-shrink-0 -mt-0.5 h-6 w-6 text-blue-gray-400" x-description="Heroicon name: outline/bell" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"></path>
+                                        </svg>
+                                        <div class="ml-3 text-sm">
+                                            <p class="font-medium text-blue-gray-900">Notifications</p>
+                                            <p class="mt-1 text-blue-gray-500 text-xs text-justify truncate overflow-clip ">Ullamcorper id at suspendisse nec id volutpat vestibulum enim. Interdum blandit.</p>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="flex p-2 border-b border-blue-gray-200 dark--violetWhite-hover" x-state-description="undefined: &quot;bg-blue-50 bg-opacity-50&quot;, undefined: &quot;hover:bg-blue-50 hover:bg-opacity-50&quot;">
+                                        <svg class="flex-shrink-0 -mt-0.5 h-6 w-6 text-blue-gray-400" x-description="Heroicon name: outline/key" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z"></path>
+                                        </svg>
+                                        <div class="ml-3 text-sm">
+                                            <p class="font-medium text-blue-gray-900">Security</p>
+                                            <p class="mt-1 text-blue-gray-500 text-xs text-justify truncate overflow-clip ">Ullamcorper id at suspendisse nec id volutpat vestibulum enim. Interdum blandit.</p>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="flex p-2 border-b border-blue-gray-200 dark--violetWhite-hover" x-state-description="undefined: &quot;bg-blue-50 bg-opacity-50&quot;, undefined: &quot;hover:bg-blue-50 hover:bg-opacity-50&quot;">
+                                        <svg class="flex-shrink-0 -mt-0.5 h-6 w-6 text-blue-gray-400" x-description="Heroicon name: outline/photograph" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                                        </svg>
+                                        <div class="ml-3 text-sm">
+                                            <p class="font-medium text-blue-gray-900">Appearance</p>
+                                            <p class="mt-1 text-blue-gray-500 text-xs text-justify truncate overflow-clip">Ullamcorper id at suspendisse nec id volutpat vestibulum enim. Interdum blandit.</p>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="flex p-2 border-b border-blue-gray-200 dark--violetWhite-hover" x-state-description="undefined: &quot;bg-blue-50 bg-opacity-50&quot;, undefined: &quot;hover:bg-blue-50 hover:bg-opacity-50&quot;">
+                                        <svg class="flex-shrink-0 -mt-0.5 h-6 w-6 text-blue-gray-400" x-description="Heroicon name: outline/cash" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                                        </svg>
+                                        <div class="ml-3 text-sm">
+                                            <p class="font-medium text-blue-gray-900">Billing</p>
+                                            <p class="mt-1 text-blue-gray-500 text-xs text-justify truncate overflow-clip ">Ullamcorper id at suspendisse nec id volutpat vestibulum enim. Interdum blandit.</p>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="flex p-2 border-b border-blue-gray-200 dark--violetWhite-hover" x-state-description="undefined: &quot;bg-blue-50 bg-opacity-50&quot;, undefined: &quot;hover:bg-blue-50 hover:bg-opacity-50&quot;">
+                                        <svg class="flex-shrink-0 -mt-0.5 h-6 w-6 text-blue-gray-400" x-description="Heroicon name: outline/view-grid-add" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 14v6m-3-3h6M6 10h2a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v2a2 2 0 002 2zm10 0h2a2 2 0 002-2V6a2 2 0 00-2-2h-2a2 2 0 00-2 2v2a2 2 0 002 2zM6 20h2a2 2 0 002-2v-2a2 2 0 00-2-2H6a2 2 0 00-2 2v2a2 2 0 002 2z"></path>
+                                        </svg>
+                                        <div class="ml-3 text-sm">
+                                            <p class="font-medium text-blue-gray-900">Integrations</p>
+                                            <p class="mt-1 text-blue-gray-500 text-xs text-justify truncate overflow-clip ">Ullamcorper id at suspendisse nec id volutpat vestibulum enim. Interdum blandit.</p>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="flex p-2 border-b border-blue-gray-200 dark--violetWhite-hover" x-state-description="undefined: &quot;bg-blue-50 bg-opacity-50&quot;, undefined: &quot;hover:bg-blue-50 hover:bg-opacity-50&quot;">
+                                        <svg class="flex-shrink-0 -mt-0.5 h-6 w-6 text-blue-gray-400" x-description="Heroicon name: outline/search-circle" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16l2.879-2.879m0 0a3 3 0 104.243-4.242 3 3 0 00-4.243 4.242zM21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                        </svg>
+                                        <div class="ml-3 text-sm">
+                                            <p class="font-medium text-blue-gray-900">Additional Resources</p>
+                                            <p class="mt-1 text-blue-gray-500 text-xs text-justify truncate overflow-clip ">Ullamcorper id at suspendisse nec id volutpat vestibulum enim. Interdum blandit.</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </aside>
+                    </template>
+
+                    <!-- Main Content Area -->
+                    <main class="flex-1 overflow-y-auto shadow-lg border-gray-200 no-scrollbar w-full">
+                        <!-- Primary column -->
+                        <section aria-labelledby="primary-heading" class="min-w-0 flex-1 h-full flex flex-col lg:order-last ">
+                            <div class="p-6 h-full w-full">
+                                <form class="space-y-8 divide-y divide-gray-200 ">
+                                    <div class="space-y-8 divide-y divide-gray-200">
+                                        <div>
+                                            <div>
+                                                <h3 class="text-lg leading-6 font-medium ">Profile</h3>
+                                                <p class="mt-1 text-sm ">This information will be displayed publicly so be careful what you share.</p>
+                                            </div>
+
+                                            <div class="mt-6 grid grid-cols-1 gap-y-6 gap-x-4 sm:grid-cols-6">
+                                                <div class="sm:col-span-4">
+                                                    <label for="username" class="block text-sm font-medium ">Username</label>
+                                                    <div class="mt-1 flex rounded-md shadow-sm">
+                                                        <span class="inline-flex items-center px-3 rounded-l-md border border-r-0 border-gray-300 bg-gray-50 text-gray-500 sm:text-sm">workcation.com/</span>
+                                                        <input type="text" name="username" id="username" autocomplete="username" class="flex-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full min-w-0 rounded-none rounded-r-md sm:text-sm border-gray-300">
+                                                    </div>
+                                                </div>
+
+                                                <div class="sm:col-span-6">
+                                                    <label for="about" class="block text-sm font-medium ">
+                                                        About
+                                                    </label>
+                                                    <div class="mt-1">
+                                                        <textarea id="about" name="about" rows="3" class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border border-gray-300 rounded-md"></textarea>
+                                                    </div>
+                                                    <p class="mt-2 text-sm ">Write a few sentences about yourself.</p>
+                                                </div>
+
+                                                <div class="sm:col-span-6">
+                                                    <label for="photo" class="block text-sm font-medium ">
+                                                        Photo
+                                                    </label>
+                                                    <div class="mt-1 flex items-center">
+                                                  <span class="h-12 w-12 rounded-full overflow-hidden ">
+                                                    <svg class="h-full w-full " fill="currentColor" viewBox="0 0 24 24">
+                                                      <path d="M24 20.993V24H0v-2.996A14.977 14.977 0 0112.004 15c4.904 0 9.26 2.354 11.996 5.993zM16.002 8.999a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                                                    </svg>
+                                                  </span>
+                                                        <button type="button" class="ml-5 bg-white py-2 px-3 border border-gray-300 rounded-md shadow-sm text-sm leading-4 font-medium  hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                                                            Change
+                                                        </button>
+                                                    </div>
+                                                </div>
+
+                                                <div class="sm:col-span-6">
+                                                    <label for="cover-photo" class="block text-sm font-medium text-gray-700">
+                                                        Cover photo
+                                                    </label>
+                                                    <div class="mt-1 flex justify-center px-6 pt-5 pb-6 border-2 border-gray-300 border-dashed rounded-md">
+                                                        <div class="space-y-1 text-center">
+                                                            <svg class="mx-auto h-12 w-12 text-gray-400" stroke="currentColor" fill="none" viewBox="0 0 48 48" aria-hidden="true">
+                                                                <path d="M28 8H12a4 4 0 00-4 4v20m32-12v8m0 0v8a4 4 0 01-4 4H12a4 4 0 01-4-4v-4m32-4l-3.172-3.172a4 4 0 00-5.656 0L28 28M8 32l9.172-9.172a4 4 0 015.656 0L28 28m0 0l4 4m4-24h8m-4-4v8m-12 4h.02" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                            </svg>
+                                                            <div class="flex text-sm text-gray-600">
+                                                                <label for="file-upload" class="relative cursor-pointer bg-white rounded-md font-medium text-indigo-600 hover:text-indigo-500 focus-within:outline-none focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-indigo-500">
+                                                                    <span>Upload a file</span>
+                                                                    <input id="file-upload" name="file-upload" type="file" class="sr-only">
+                                                                </label>
+                                                                <p class="pl-1">or drag and drop</p>
+                                                            </div>
+                                                            <p class="text-xs text-gray-500">
+                                                                PNG, JPG, GIF up to 10MB
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="pt-8">
+                                            <div>
+                                                <h3 class="text-lg leading-6 font-medium text-gray-900">
+                                                    Personal Information
+                                                </h3>
+                                                <p class="mt-1 text-sm text-gray-500">
+                                                    Use a permanent address where you can receive mail.
+                                                </p>
+                                            </div>
+                                            <div class="mt-6 grid grid-cols-1 gap-y-6 gap-x-4 sm:grid-cols-6">
+                                                <div class="sm:col-span-3">
+                                                    <label for="first-name" class="block text-sm font-medium text-gray-700">
+                                                        First name
+                                                    </label>
+                                                    <div class="mt-1">
+                                                        <input type="text" name="first-name" id="first-name" autocomplete="given-name" class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md">
+                                                    </div>
+                                                </div>
+
+                                                <div class="sm:col-span-3">
+                                                    <label for="last-name" class="block text-sm font-medium text-gray-700">
+                                                        Last name
+                                                    </label>
+                                                    <div class="mt-1">
+                                                        <input type="text" name="last-name" id="last-name" autocomplete="family-name" class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md">
+                                                    </div>
+                                                </div>
+
+                                                <div class="sm:col-span-4">
+                                                    <label for="email" class="block text-sm font-medium text-gray-700">
+                                                        Email address
+                                                    </label>
+                                                    <div class="mt-1">
+                                                        <input id="email" name="email" type="email" autocomplete="email" class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md">
+                                                    </div>
+                                                </div>
+
+                                                <div class="sm:col-span-3">
+                                                    <label for="country" class="block text-sm font-medium text-gray-700">
+                                                        Country
+                                                    </label>
+                                                    <div class="mt-1">
+                                                        <select id="country" name="country" autocomplete="country-name" class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md">
+                                                            <option>United States</option>
+                                                            <option>Canada</option>
+                                                            <option>Mexico</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+
+                                                <div class="sm:col-span-6">
+                                                    <label for="street-address" class="block text-sm font-medium text-gray-700">
+                                                        Street address
+                                                    </label>
+                                                    <div class="mt-1">
+                                                        <input type="text" name="street-address" id="street-address" autocomplete="street-address" class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md">
+                                                    </div>
+                                                </div>
+
+                                                <div class="sm:col-span-2">
+                                                    <label for="city" class="block text-sm font-medium text-gray-700">
+                                                        City
+                                                    </label>
+                                                    <div class="mt-1">
+                                                        <input type="text" name="city" id="city" autocomplete="address-level2" class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md">
+                                                    </div>
+                                                </div>
+
+                                                <div class="sm:col-span-2">
+                                                    <label for="region" class="block text-sm font-medium text-gray-700">
+                                                        State / Province
+                                                    </label>
+                                                    <div class="mt-1">
+                                                        <input type="text" name="region" id="region" autocomplete="address-level1" class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md">
+                                                    </div>
+                                                </div>
+
+                                                <div class="sm:col-span-2">
+                                                    <label for="postal-code" class="block text-sm font-medium text-gray-700">
+                                                        ZIP / Postal code
+                                                    </label>
+                                                    <div class="mt-1">
+                                                        <input type="text" name="postal-code" id="postal-code" autocomplete="postal-code" class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="pt-8">
+                                            <div>
+                                                <h3 class="text-lg leading-6 font-medium text-gray-900">
+                                                    Notifications
+                                                </h3>
+                                                <p class="mt-1 text-sm text-gray-500">
+                                                    We'll always let you know about important changes, but you pick what else you want to hear about.
+                                                </p>
+                                            </div>
+                                            <div class="mt-6">
+                                                <fieldset>
+                                                    <legend class="text-base font-medium text-gray-900">
+                                                        By Email
+                                                    </legend>
+                                                    <div class="mt-4 space-y-4">
+                                                        <div class="relative flex items-start">
+                                                            <div class="flex items-center h-5">
+                                                                <input id="comments" name="comments" type="checkbox" class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded">
+                                                            </div>
+                                                            <div class="ml-3 text-sm">
+                                                                <label for="comments" class="font-medium text-gray-700">Comments</label>
+                                                                <p class="text-gray-500">Get notified when someones posts a comment on a posting.</p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="relative flex items-start">
+                                                            <div class="flex items-center h-5">
+                                                                <input id="candidates" name="candidates" type="checkbox" class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded">
+                                                            </div>
+                                                            <div class="ml-3 text-sm">
+                                                                <label for="candidates" class="font-medium text-gray-700">Candidates</label>
+                                                                <p class="text-gray-500">Get notified when a candidate applies for a job.</p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="relative flex items-start">
+                                                            <div class="flex items-center h-5">
+                                                                <input id="offers" name="offers" type="checkbox" class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded">
+                                                            </div>
+                                                            <div class="ml-3 text-sm">
+                                                                <label for="offers" class="font-medium text-gray-700">Offers</label>
+                                                                <p class="text-gray-500">Get notified when a candidate accepts or rejects an offer.</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </fieldset>
+                                                <fieldset class="mt-6">
+                                                    <div>
+                                                        <legend class="text-base font-medium text-gray-900">
+                                                            Push Notifications
+                                                        </legend>
+                                                        <p class="text-sm text-gray-500">These are delivered via SMS to your mobile phone.</p>
+                                                    </div>
+                                                    <div class="mt-4 space-y-4">
+                                                        <div class="flex items-center">
+                                                            <input id="push-everything" name="push-notifications" type="radio" class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300">
+                                                            <label for="push-everything" class="ml-3 block text-sm font-medium text-gray-700">
+                                                                Everything
+                                                            </label>
+                                                        </div>
+                                                        <div class="flex items-center">
+                                                            <input id="push-email" name="push-notifications" type="radio" class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300">
+                                                            <label for="push-email" class="ml-3 block text-sm font-medium text-gray-700">
+                                                                Same as email
+                                                            </label>
+                                                        </div>
+                                                        <div class="flex items-center">
+                                                            <input id="push-nothing" name="push-notifications" type="radio" class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300">
+                                                            <label for="push-nothing" class="ml-3 block text-sm font-medium text-gray-700">
+                                                                No push notifications
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </fieldset>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="pt-5">
+                                        <div class="flex justify-end">
+                                            <button type="button" class="bg-white py-2 px-4 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                                                Cancel
+                                            </button>
+                                            <button type="submit" class="ml-3 inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                                                Save
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+
+
+                            </div>
+                        </section>
+                    </main>
+
+                    <!-- Secondary column (hidden on smaller screens) -->
+
+
+
+                    <template x-if="rightBar" class="md:w-72 dark--gray">
+                        <div class="pb-1 sm:pb-6 ">
+                            <div class="rounded">
+                                <div class="relative h-40 sm:h-56">
+                                    <img class="absolute h-full w-full object-cover rounded-l " src="https://images.unsplash.com/photo-1501031170107-cfd33f0cbdcc?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=800&amp;h=600&amp;q=80" alt="">
+                                </div>
+                                <div class="mt-6 px-4 sm:mt-8 sm:flex sm:items-end sm:px-6">
+                                    <div class="sm:flex-1">
+                                        <div>
+                                            <div class="flex items-center">
+                                                <h3 class="font-bold text-xl  sm:text-2xl">Ashley Porter</h3>
+                                                <span class="ml-2.5 bg-green-400 flex-shrink-0 inline-block h-2 w-2 rounded-full"><span class="sr-only">Online</span></span>
+                                            </div>
+                                            <p class="text-sm text-gray-500">@ashleyporter</p>
+                                        </div>
+                                        <div class="mt-5 flex flex-wrap space-y-3 sm:space-y-0 sm:space-x-3">
+                                            <button type="button" class="flex-shrink-0 w-full inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:flex-1">
+                                                Message
+                                            </button>
+                                            <button type="button" class="flex-1 w-full inline-flex items-center justify-center px-4 py-2 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                                                Call
+                                            </button>
+                                            <span class="ml-3 inline-flex sm:ml-0">
+                                                  <div x-data="{ profile_menu: false }"  @keydown.escape.stop="profile_menu = false; focusButton()" @click.away="{ profile_menu: false }" class="relative inline-block text-left">
+                                                        <button type="button" class="inline-flex items-center p-2 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-400 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" id="options-menu-button" x-ref="button" @click="profile_menu = !profile_menu" @keyup.space.prevent="onButtonEnter()" @keydown.enter.prevent="onButtonEnter()" aria-expanded="false" aria-haspopup="true" x-bind:aria-expanded="open.toString()" @keydown.arrow-up.prevent="onArrowUp()" @keydown.arrow-down.prevent="onArrowDown()">
+                                                              <span class="sr-only">Open options menu</span>
+                                                                <svg class="h-5 w-5" x-description="Heroicon name: solid/dots-vertical" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                                                  <path d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z"></path>
+                                                                </svg>
+                                                        </button>
+
+                                                          <div x-show="profile_menu" x-transition:enter="transition ease-out duration-100" x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-75" x-transition:leave-start="transform opacity-100 scale-100" x-transition:leave-end="transform opacity-0 scale-95" x-description="Dropdown panel, show/hide based on dropdown state." class="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none" x-ref="menu-items"  role="menu" aria-orientation="vertical" aria-labelledby="options-menu-button" tabindex="-1" @keydown.arrow-up.prevent="onArrowUp()" @keydown.arrow-down.prevent="onArrowDown()" @keydown.tab="open = false" @keydown.enter.prevent="open = false; focusButton()" @keyup.space.prevent="open = false; focusButton()">
+                                                                <div class="py-1" role="none">
+                                                                  <a href="#" class="text-gray-700 block px-4 py-2 text-sm"   role="menuitem" tabindex="-1" id="options-menu-item-0" @mouseenter="activeIndex = 0" @mouseleave="activeIndex = -1" @click="open = false; focusButton()">View profile</a>
+                                                                  <a href="#" class="text-gray-700 block px-4 py-2 text-sm"  role="menuitem" tabindex="-1" id="options-menu-item-1" @mouseenter="activeIndex = 1" @mouseleave="activeIndex = -1" @click="open = false; focusButton()">Copy profile link</a>
+                                                                </div>
+                                                          </div>
+
+                                                  </div>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="px-4 pt-5 pb-5 sm:px-0 sm:pt-0">
+                            <dl class="space-y-8 px-4 sm:px-6 sm:space-y-6">
+                                <div>
+                                    <dt class="text-sm font-medium text-gray-500 sm:w-40 sm:flex-shrink-0">
+                                        Bio
+                                    </dt>
+                                    <dd class="mt-1 text-sm text-gray-900 sm:col-span-2">
+                                        <p>
+                                            Enim feugiat ut ipsum, neque ut. Tristique mi id elementum praesent. Gravida in tempus feugiat netus enim aliquet a, quam scelerisque. Dictumst in convallis nec in bibendum aenean arcu.
+                                        </p>
+                                    </dd>
+                                </div>
+                                <div>
+                                    <dt class="text-sm font-medium text-gray-500 sm:w-40 sm:flex-shrink-0">
+                                        Location
+                                    </dt>
+                                    <dd class="mt-1 text-sm text-gray-900 sm:col-span-2">
+                                        New York, NY, USA
+                                    </dd>
+                                </div>
+                                <div>
+                                    <dt class="text-sm font-medium text-gray-500 sm:w-40 sm:flex-shrink-0">
+                                        Website
+                                    </dt>
+                                    <dd class="mt-1 text-sm text-gray-900 sm:col-span-2">
+                                        ashleyporter.com
+                                    </dd>
+                                </div>
+                                <div>
+                                    <dt class="text-sm font-medium text-gray-500 sm:w-40 sm:flex-shrink-0">
+                                        Birthday
+                                    </dt>
+                                    <dd class="mt-1 text-sm text-gray-900 sm:col-span-2">
+                                        <time datetime="1988-06-23">
+                                            June 23, 1988
+                                        </time>
+                                    </dd>
+                                </div>
+                            </dl>
+                        </div>
+                    </template>
+                </div>
+
+
+
+                <div class="w-full  p-1 m-1  shadow-lg    bg-gray-200 text-gray-700 dark:bg-gray-800 dark:text-gray-200 dark:text-white  border-gray-600     dark:border-gray-200">
+                    <p class=" float-right mr-3 ">Copyright by TailDash @ 2022 - 22 </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- App Script -->
+<script src="./js/app.js"></script>
+
+</body>
+</html>
