@@ -1,2 +1,2 @@
 # taildash_html
-tailwind dashboard html boilerplate
+tailwind dashboard html template
